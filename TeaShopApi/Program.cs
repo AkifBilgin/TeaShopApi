@@ -11,7 +11,13 @@ builder.Services.AddScoped<IDrinkDal, EfDrinkDal>();
 builder.Services.AddScoped<IDrinkService, DrinkManager>();
 
 builder.Services.AddScoped<IFQADal, EfFQADal>();
-builder.Services.AddScoped<IFQAService, FQAManager>();
+builder.Services.AddScoped<IFAQService, FAQManager>();
+
+builder.Services.AddScoped<IMessageDal, EfMessageDal>();
+builder.Services.AddScoped<IMessageService, MessageManager>();
+
+builder.Services.AddScoped<ITestimonialDal, EfTestimonialDal>();
+builder.Services.AddScoped<ITestimonialService, TestimonialManager>();
 
 builder.Services.AddDbContext<TeaContext>();
 
